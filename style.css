@@ -1,0 +1,80 @@
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: #232323;
+}
+h1 {
+  text-align: center;
+}
+p {
+  text-align: right;
+  font-size: 9px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .wrapper h2 {
+    text-align: center;
+  }
+}
+.wrapper .logika {
+  max-width: 40%;
+  margin: 60px;
+}
+@media screen and (max-width: 800px) {
+  .wrapper .logika {
+    margin: 10px;
+    max-width: 90%;
+  }
+}
+.wrapper .logika .options-part,
+.wrapper .logika .operator-part {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+.wrapper .logika .options-part label,
+.wrapper .logika .operator-part label,
+.wrapper .logika .options-part input,
+.wrapper .logika .operator-part input {
+  font-size: 12px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: grey;
+}
+.wrapper .logika .options-part input,
+.wrapper .logika .operator-part input {
+  max-width: 150px;
+  padding: 3px 5px;
+  margin-bottom: 5px;
+}
+.wrapper .logika .options-part .radio input {
+  width: auto;
+}
+.wrapper .logika .operator-part .input-wrapper {
+  display: flex;
+}
+.wrapper .logika .operator-part .input-wrapper .fields {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .logika .operator-part .input-wrapper input[name=submit] {
+  margin-left: 20px;
+  background-color: lightblue;
+  border: 0;
+  padding: 10px;
+}
+.wrapper .final-price {
+  margin: 60px;
+}
+.wrapper .final-price .output {
+  color: green;
+  text-align: center;
+}

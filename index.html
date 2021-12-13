@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3Dcashapp</title>
+    <meta name="description" content="3D printing service calculator">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <h1>3D cash app</h1>
+    
+    <div class="wrapper">
+
+        <form class="logika"> 
+            <h2>Part options</h2>
+            <div class="options-part">
+                <label for="hours">Print time (hrs)</label>
+                <input name="hours" type="number" step=".1" required>
+                <label for="weight">Part weight (kg)</label>
+                <input name="weight" type="number" step=".1" required>
+                
+                <div class="radio">
+                    <input id="draft" type="radio" name="quality" value="draft" required>
+                    <label for="draft">Draft</label>
+                    <input id="medium" type="radio" name="quality" value="medium" checked required>
+                    <label for="medium">Normal</label>
+                    <input id="quality" type="radio" name="quality" value="quality" required>
+                    <label for="quality">Quality</label>
+                </div>
+                
+            </div>
+            <h2>Operator options</h2>
+            <div class="operator-part">
+                <div class="input-wrapper">
+                    <div class="fields">
+                        <label for="filament_cost">Filament cost (€/kg)</label>
+                        <input name="filament_cost" type="number" value="20" required>
+            
+                        <label for="printer_rate">Printer rate (€/hr)</label>
+                        <input name="printer_rate" type="number" value="3" required>
+            
+                        <label for="electricity_cost">Electricity cost (€/kWh)</label>
+                        <input name="electricity_cost" type="number" value="0.15" required>
+            
+                        <label for="operator_fee">Operator fee</label>
+                        <input name="operator_fee" type="number" value="15" required>
+                    </div>
+                    <input type="submit" name="submit">
+                </div>
+            </div>
+    
+            
+        </form>
+    
+        <div class="final-price">
+            <h2>Estimated price</h2>
+            <h2 class="output">...</h2>
+        </div>
+    </div>
+
+    <p>club23</p>
+    
+
+    <script src="shit.js" async></script>
+
+
+</body>
+
+</html>

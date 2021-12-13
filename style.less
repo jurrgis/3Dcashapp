@@ -1,0 +1,93 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    color: #232323;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: right;
+    font-size: 9px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 800px){
+        flex-direction: column-reverse;
+        align-items: center;
+
+        h2 {
+            text-align: center;
+        }
+    }
+    .logika {
+        max-width: 40%;
+        margin: 60px;
+        @media screen and (max-width: 800px){
+            margin: 10px;
+            max-width: 90%;
+        }
+        .options-part,
+        .operator-part {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            label, input {
+                font-size: 12px;
+                border-radius: 4px;
+                border-width: 1px;
+                border-color: grey;
+            }
+
+            input {
+                max-width: 150px;
+                padding: 3px 5px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .options-part {
+            .radio {
+                input {
+                    width: auto;
+                }
+            }
+        }
+
+        .operator-part {
+            .input-wrapper{
+                display: flex;
+                
+                .fields {
+                    display: flex;
+                    flex-direction: column;
+
+                }
+
+                input[name=submit]{
+                    margin-left: 20px;
+                    background-color: lightblue;
+                    border: 0;
+                    padding: 10px;
+                }
+            }
+        }
+
+
+    }
+
+    .final-price {
+        margin: 60px;
+
+        .output {
+            color: green;
+            text-align: center;
+        }
+    }
+}
+
