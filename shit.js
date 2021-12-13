@@ -7,6 +7,7 @@ $('.logika').on('submit', (e) => {
     let partWeight = document.querySelector("[name='weight']").value;
     let quality = document.querySelector("[name='quality']:checked").value;
 
+
     //operator
     let filamentCost = document.querySelector("[name='filament_cost']").value;
     let printerRate = document.querySelector("[name='printer_rate']").value;
@@ -21,12 +22,14 @@ $('.logika').on('submit', (e) => {
         newPrintTime = printTime*1;
     } else if (quality == "medium"){
         newPrintTime = printTime*1.5;
-    } else if (quality == "quality"){
-        newPrintTime = printTime*2;
+    } else if (quality == "maximum"){
+        newPrintTime = printTime*2.1; // BUG2 jeigu daugiklis 2, tada galutine verte tukstancius rodo
+    } else {
+        newPrintTime = printTime;
     }
     
     //dothemaths
-    let finalCost = (filamentCost*partWeight) + (printerRate*newPrintTime) + (electricityCost*newPrintTime) + operatorFee;
+    let finalCost = ((filamentCost*partWeight) + (printerRate*newPrintTime) + (electricityCost*newPrintTime) + operatorFee);
     let equalize = Math.ceil(finalCost);
 
     //output to html
