@@ -23,13 +23,18 @@ $('.logika').on('submit', (e) => {
     } else if (quality == "medium"){
         newPrintTime = printTime*1.5;
     } else if (quality == "maximum"){
-        newPrintTime = printTime*2.1; // BUG2 jeigu daugiklis 2, tada galutine verte tukstancius rodo
+        newPrintTime = printTime*2;
     } else {
         newPrintTime = printTime;
     }
     
     //dothemaths
-    let finalCost = ((filamentCost*partWeight) + (printerRate*newPrintTime) + (electricityCost*newPrintTime) + operatorFee);
+
+    let step1 = filamentCost*partWeight;
+    let step2 = printerRate*newPrintTime;
+    let step3 = electricityCost*newPrintTime;
+
+    let finalCost = step1 + step2 + step3 + Number(operatorFee);
     let equalize = Math.ceil(finalCost);
 
     //output to html

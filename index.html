@@ -47,16 +47,16 @@
                 <div class="input-wrapper">
                     <div class="fields">
                         <label for="filament_cost">Filament cost (€/kg)</label>
-                        <input name="filament_cost" type="number" value="20" required>
+                        <input name="filament_cost" type="number" value="20" min="0" step=".1" required>
             
                         <label for="printer_rate">Printer rate (€/hr)</label>
-                        <input name="printer_rate" type="number" value="3" required>
+                        <input name="printer_rate" type="number" value="3" min="0" step=".1" required>
             
                         <label for="electricity_cost">Electricity cost (€/kWh)</label>
-                        <input name="electricity_cost" type="number" value="0.15" required>
+                        <input name="electricity_cost" type="number" value="0.15" min="0" step=".01" required>
             
                         <label for="operator_fee">Operator fee</label>
-                        <input name="operator_fee" type="number" value="15" required>
+                        <input name="operator_fee" type="number" value="15" min="0" step=".1" required>
                     </div>
                     <input type="submit" name="submit">
                 </div>
